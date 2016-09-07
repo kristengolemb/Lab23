@@ -22,11 +22,10 @@
 		user="jdbc" password="java123" />
 
 <sql:query dataSource="${datasrc}" var="result">
-SELECT Title FROM Movies WHERE Category = '${param.category}';
+SELECT * FROM Movies WHERE Category = '${param.category}';
 </sql:query>
 
 <table>
-	
 	<c:forEach var="row" items="${result.rows}">
 	<tr>
 		<td><c:out value="${row.Title}" /></td>
@@ -34,8 +33,6 @@ SELECT Title FROM Movies WHERE Category = '${param.category}';
 	</c:forEach>
 	
 </table>
-
-
 
 </body>
 </html>
