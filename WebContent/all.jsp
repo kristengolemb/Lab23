@@ -26,15 +26,10 @@ SELECT Title FROM Movies WHERE Category = '${param.category}';
 </sql:query>
 
 <table>
-	<tr>
-		<th>Title</th>
-		<th>Category</th>
-	</tr>
 	
 	<c:forEach var="row" items="${result.rows}">
 	<tr>
 		<td><c:out value="${row.Title}" /></td>
-		<td><c:out value="${row.Category}" /></td>
 	</tr>
 	</c:forEach>
 	
